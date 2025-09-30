@@ -75,6 +75,7 @@ brew install zopfli
 brew install python
 brew install node
 brew install angular-cli
+brew install go
 
 # Install casks I use
 brew install --cask iterm2
