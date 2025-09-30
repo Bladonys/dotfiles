@@ -8,7 +8,10 @@ function justDoIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
+		--exclude "yay.sh" \
+		--exclude "brew.sh" \
 		--exclude "README.md" \
+		--exclude ".macos" \
 		-avh --no-perms . ~;
 
 	source ~/.bash_profile;

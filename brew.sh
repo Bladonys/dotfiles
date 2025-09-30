@@ -78,7 +78,7 @@ brew install angular-cli
 brew install go
 
 # Install casks I use
-brew install --cask iterm2
+brew install --cask ghostty
 brew install --cask zed
 brew install --cask temurin # JDK I prefer
 brew install --cask legcord # Unofficial but better Discord client
