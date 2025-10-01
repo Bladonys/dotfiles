@@ -27,34 +27,14 @@ justDoIt() {
   rsync -avh --no-perms zed/ "$HOME/.config/zed/"
 
   # Determine Zen profile base depending on OS
-  case "$(uname -s)" in
-    Darwin)
-      profiles_glob="$HOME/Library/Application Support/zen/Profiles/"'*'"(release)/"
-      ;;
-    Linux)
-      profiles_glob="$HOME/.zen/Profiles/"'*'"(release)/"
-      ;;
-    *)
-      echo "Unsupported OS: $(uname -s)" >&2
-      return 1
-      ;;
-  esac
-
-  # Expand matching profiles (if any)
-  # Use an array to handle multiple matches
-  mapfile -t zen_profiles < <(eval "printf '%s\n' $profiles_glob")
-
-  if (( ${#zen_profiles[@]} == 0 )); then
-    echo "No Zen profiles ending with '(release)' found." >&2
-    return 1
+  if [[ "$(uname -s)" = "Darwin" ]]; then
+  	zen_profile="$HOME/Library/Application Support/zen/Profiles/"*\(release\)/chrome
+  else
+    zen_profile="$HOME/.zen/"*\(release\)/chrome
   fi
 
-  # Copy the zen-browser theme into each profile's chrome/ folder
-  for p in "${zen_profiles[@]}"; do
-    mkdir -p "$p/chrome"
-    rsync -avh --no-perms zen-browser/ "$p/chrome/"
-    echo "Synced Zen theme to: $p/chrome/"
-  done
+  # Sync Zen theme
+  rsync -avh --no-perms zen-browser/ $zen_profile
 
   # Reload shell config if present
   [[ -f "$HOME/.bash_profile" ]] && source "$HOME/.bash_profile" || true
