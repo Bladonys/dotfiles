@@ -83,6 +83,7 @@ brew install --cask legcord # Unofficial but better Discord client
 brew install --cask element # Matrix client
 brew install --cask tidal
 brew install --cask obsidian
+brew install --cask transmission
 
 # Web browsers
 brew install --cask zen # Main browser
