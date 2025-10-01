@@ -18,6 +18,10 @@ justDoIt() {
     --exclude ".macos" \
     ./ "$HOME"/
 
+  #  Sync ghostty config
+  mkdir -p "$HOME/.config/ghostty"
+  rsync -avh --no-perms "./ghostty.conf" "$HOME/.config/ghostty/config"
+
   # Sync Zed editor settings
   mkdir -p "$HOME/.config/zed"
   rsync -avh --no-perms zed/ "$HOME/.config/zed/"
