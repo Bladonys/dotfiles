@@ -58,9 +58,7 @@ brew install ack
 brew install git
 brew install git-lfs
 brew install gs
-brew install imagemagick --with-webp
 brew install lua
-brew install lynx
 brew install p7zip
 brew install pigz
 brew install pv
@@ -96,6 +94,9 @@ brew install --cask proton-drive
 brew install --cask proton-pass
 # I personally do not use Protons VPNs or VPNs in general
 # brew install --cask protonvpn
+
+# JetBrains Toolbox (currently only available for Intel Macs :/)
+# brew install --cask jetbrains-toolbox
 
 # Remove outdated versions from the cellar.
 brew cleanup
