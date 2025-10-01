@@ -14,6 +14,8 @@ function justDoIt() {
 		--exclude ".macos" \
 		-avh --no-perms . ~;
 
+	rsync zed/* ~/.config/zed
+
 	source ~/.bash_profile;
 }
 
