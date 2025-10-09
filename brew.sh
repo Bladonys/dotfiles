@@ -99,5 +99,9 @@ brew install --cask proton-pass
 # JetBrains Toolbox (currently only available for Intel Macs :/)
 # brew install --cask jetbrains-toolbox
 
+# Install some fonts
+brew install --cask font-sf-mono
+brew install --cask font-sf-pro
+
 # Remove outdated versions from the cellar.
 brew cleanup
