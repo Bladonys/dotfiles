@@ -16,6 +16,9 @@ justDoIt() {
     --exclude "brew.sh" \
     --exclude "README.md" \
     --exclude ".macos" \
+    --exclude "/zed" \
+    --exclude "/zen-browser" \
+    --exclude "ghostty.conf"
     ./ "$HOME"/
 
   #  Sync ghostty config
