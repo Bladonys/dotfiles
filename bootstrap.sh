@@ -18,12 +18,15 @@ justDoIt() {
     --exclude ".macos" \
     --exclude "zed" \
     --exclude "zen-browser" \
-    --exclude "ghostty.conf" \
+    --exclude "ghostty" \
     ./ "$HOME"/
 
   #  Sync ghostty config
   mkdir -p "$HOME/.config/ghostty"
-  rsync -avh --no-perms "./ghostty.conf" "$HOME/.config/ghostty/config"
+  rsync -avh --no-perms "./ghostty/config" "$HOME/.config/ghostty/config"
+
+  mkdir -p "$HOME/.config/ghostty/themes"
+  rsync -avh --no-perms "./ghostty/catppuccin.conf" "$HOME/.config/ghostty/themes/catppuccin.conf"
 
   # Sync Zed editor settings
   mkdir -p "$HOME/.config/zed"
