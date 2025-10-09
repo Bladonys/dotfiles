@@ -7,19 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Catppuccin Mocha",
   "disable_ai": true,
   "buffer_font_features": {
     "calt": 0
   },
-  "buffer_font_family": "Menlo",
+  "buffer_font_family": "SF Mono",
   "ui_font_family": ".SystemUIFont",
   "base_keymap": "JetBrains",
   "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "buffer_font_size": 15,
   "theme": {
     "mode": "dark",
-    "light": "Rosé Pine Dawn",
-    "dark": "Rosé Pine"
+    "light": "Catppuccin Latte - No Italics",
+    "dark": "Catppuccin Mocha - No Italics"
   },
   "format_on_save": [],
   "prettier": { "allowed": true },
@@ -28,6 +29,7 @@
     "angular": true,
     "java": true,
     "scss": true,
-    "rose-pine-theme": true
+    "catppuccin": true,
+    "catppuccin-icons": true
   }
 }
